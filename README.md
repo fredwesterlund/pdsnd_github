@@ -12,4 +12,5 @@ Files used are:
 
 Credits: 
 Many useful code examples from stackoverflow.com
-Help received from collegues at SpareBank 1 BV. 
+strftime.org (Python's striftime) directives
+Help received from collegues at SpareBank 1 BV 
