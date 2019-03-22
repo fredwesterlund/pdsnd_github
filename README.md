@@ -11,4 +11,5 @@ Files used are:
 	washington.csv
 
 Credits: 
-Many useful code examples from stackoverflow.com 
+Many useful code examples from stackoverflow.com
+Help received from collegues at SpareBank 1 BV. 
