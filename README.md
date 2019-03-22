@@ -2,11 +2,13 @@ Project created on 2019-03-22.
 
 Project title: Fredrik's bikeshare project.
 
-### Description
-Describe what your project is about and what it does
+The project calculates statistics for a bikeshare company in three US cities.
 
-### Files used
-Include the files used
+Files used are:
+	Bikeshare.py
+	chicaco.csv
+	new_york_city.csv
+	washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
