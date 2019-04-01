@@ -162,12 +162,12 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # Displays total travel time
-    #https://stackoverflow.com/questions/22132525/add-column-with-number-of-days-between-dates-in-dataframe-pandas
+    #Reference: https://stackoverflow.com/questions/22132525/add-column-with-number-of-days-between-dates-in-dataframe-pandas
     total_travel_time = df['Trip Duration'].sum()
-    #https://stackoverflow.com/questions/47434724/getting-floor-division-and-remainder-at-same-time-in-2-separate-variables
+    #Reference: https://stackoverflow.com/questions/47434724/getting-floor-division-and-remainder-at-same-time-in-2-separate-variables
     minutes, seconds = divmod(total_travel_time,60)
     hours, minutes = divmod(minutes,60)
-    #https://stackoverflow.com/questions/493386/how-to-print-without-newline-or-space
+    #Reference: https://stackoverflow.com/questions/493386/how-to-print-without-newline-or-space
     print('The total travel time was:')
     print('\n   {0:.0f} hours, '.format(hours))
     print('\n   {0:.0f} minutes and '.format(minutes))
@@ -180,7 +180,7 @@ def trip_duration_stats(df):
         print('\nThe mean travel time was:')
         print('\n   {0:.0f} hours, '.format(hours))
         print('\n   {0:.0f} minutes and '.format(minutes))
-        #https://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
+        #Reference: https://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points
         print('\n   {0:.2f} seconds.'.format(seconds))
  
     else:
@@ -232,7 +232,7 @@ def display_raw_data(df):
     end_row = 5
     while True:
         if raw_data == 'yes':
-            #https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
+            #Reference: https://www.shanelynn.ie/select-pandas-dataframe-rows-and-columns-using-iloc-loc-and-ix/
             print(df[df.columns[0:-1]].iloc[start_row:end_row])
             start_row += 5
             end_row += 5
