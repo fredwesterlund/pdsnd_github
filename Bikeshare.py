@@ -116,13 +116,14 @@ def time_stats(df):
         print('The most common day of the week is {}.'.format(most_common_day_rank[0].lower()))
     
     # Displays the most common start hour
-    df['hour'] = df['Start Time'].values.astype('<M8[h]') #https://stackoverflow.com/questions/42977395/pandas-dt-hour-formatting
+    df['hour'] = df['Start Time'].values.astype('<M8[h]') 
+    #Referense: https://stackoverflow.com/questions/42977395/pandas-dt-hour-formatting
     df['hour'] = df['hour'].dt.time
     most_common_hour_rank = df['hour'].value_counts().index.tolist()
     
     from datetime import datetime
     most_common_hour = most_common_hour_rank[0].strftime("%-H %p") 
-    #https://stackoverflow.com/questions/13855111/how-can-i-convert-24-hour-time-to-12-hour-time
+    #Referenses: https://stackoverflow.com/questions/13855111/how-can-i-convert-24-hour-time-to-12-hour-time
     #http://strftime.org/
     print('The most common start hour is {}.'.format(most_common_hour))
     
@@ -145,7 +146,7 @@ def station_stats(df):
     print('The most commonly used end station is {}.'.format(most_common_end_station_rank[0]))
 
     # Displays most frequent combination of start station and end station trip
-    #https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.cat.html
+    #Reference: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.cat.html
     df['Start End Station'] = df['Start Station'].str.cat(df['End Station'], sep=' to ') 
     most_common_trip_rank = df['Start End Station'].value_counts().index.tolist()
     print('The most frequent combination of start station and end station trip is {}.'.format(most_common_trip_rank[0]))
