@@ -38,7 +38,6 @@ def get_filters():
         print('\nSorry i did not get your input. \n')
         month = str(input("Please specity the name of the month, from 'january' to 'june' or type 'all' for all months:")).lower()
         
-        
     # Get's user input for day of week (all, monday, tuesday, ... sunday)
     day = str(input("\nPlease specify the day of the week, for example 'monday' or type 'all' for all weekdays:")).lower()
 
@@ -47,7 +46,6 @@ def get_filters():
     while day not in list_of_days:
         print('\nSorry i did not get your input. \n')
         day = str(input("Please specify the day of the week, for example 'monday' or type 'all' for all weekdays:")).lower()
-    
     
     #print('-'*40)
     return city, month, day
@@ -106,9 +104,11 @@ def time_stats(df):
     
     # Displays the most common month
     months = ['january', 'february', 'march', 'april', 'may', 'june']
-    if df['month'].nunique() > 1: #https://stackoverflow.com/questions/45759966/counting-unique-values-in-a-column-in-pandas-dataframe-like-in-qlik
-        most_common_month_rank = df['month'].value_counts().index.tolist() #https://stackoverflow.com/questions/35523635/extract-values-in-pandas-value-counts
+    if df['month'].nunique() > 1: 
+        most_common_month_rank = df['month'].value_counts().index.tolist() 
         print('The most common month is {}.'.format(months[most_common_month_rank[0]-1]))
+    #Referenses: #https://stackoverflow.com/questions/45759966/counting-unique-values-in-a-column-in-pandas-dataframe-like-in-qlik
+    #https://stackoverflow.com/questions/35523635/extract-values-in-pandas-value-counts
 
     # Displays the most common day of week
     if df['day_of_week'].nunique() > 1:
